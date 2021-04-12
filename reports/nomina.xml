@@ -1,0 +1,12 @@
+<odoo>
+    <data>
+        <report
+            string="Nómina"
+            id="nueva_herramienta_nomina_report"
+            model="nueva_herramienta.nomina"
+            report_type="qweb-pdf"
+            name="nueva_herramienta.report_nomina_card"
+            attachment_use="True">
+        </report>
+    </data>
+</odoo>

@@ -1,0 +1,74 @@
+<odoo>
+    <data>
+        <template id="report_nomina_card">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="web.external_layout">
+                        <div class="page">
+                            <h3>Nómina</h3>
+                            <div class="row">
+                                <div class="col-6">
+                                    <h5 style="color:purple">Datos de la empresa</h5>
+                                    <p><strong>Nombre:</strong></p>
+                                    <p><span t-field="o.nombreEmpresa"/></p>
+                                    <p><strong>Dirección:</strong></p>
+                                    <p><span t-field="o.domicilioEmpresa"/></p>
+                                    <p><strong>CIF:</strong></p>
+                                    <p><span t-field="o.cif"/></p>
+                                </div>
+                                <div class="col-6">
+                                    <h5 style="color:purple">Datos del trabajador</h5>
+                                    <p><strong>Nombre:</strong></p>
+                                    <p><span t-field="o.nombreTrabajador"/></p>
+                                    <p><strong>NIF:</strong></p>
+                                    <p><span t-field="o.nif"/></p>
+                                    <p><strong>Número de Afiliación a la Seguridad Social:</strong></p>
+                                    <p><span t-field="o.numAfiliacion"/></p>
+                                    <p><strong>Grupo Profesional:</strong></p>
+                                    <p><span t-field="o.grupoProfesional"/></p>
+                                </div>
+                            </div>
+                            <br/>
+                            <h5 style="color:purple">Periodo de liquidación</h5>
+                            <div class="row">
+                                <div class="col-6">
+                                    <p><strong>Mes: </strong><span t-field="o.mes"/></p>
+                                </div>
+                                <div class="col-6">
+                                    <p><strong>Año: </strong><span t-field="o.anio"/></p>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="row">
+                                <div class="col-6">
+                                    <h5 style="color:purple">Devengos</h5>
+                                    <p><strong>Salario base: </strong><span t-field="o.salarioBase"/></p>
+                                    <p><strong>Complementos salariales: </strong><span t-field="o.complementosSalariales"/></p>
+                                    <p><strong>Horas extraordinarias: </strong><span t-field="o.horasExtra"/></p>
+                                    <p><strong>Complementos no salariales: </strong><span t-field="o.complementosNoSalariales"/></p>
+                                    <p><strong>Total devengado: </strong><span t-field="o.totalDevengado"/></p>
+                                </div>
+                                <div class="col-6">
+                                    <h5 style="color:purple">Deducciones</h5>
+                                    <p><strong>Contingencias comunes: </strong><span t-field="o.contingenciasComunes"/></p>
+                                    <p><strong>Desempleo: </strong><span t-field="o.desempleo"/></p>
+                                    <p><strong>Formación profesional: </strong><span t-field="o.formacionProfesional"/></p>
+                                    <p><strong>IRPF: </strong><span t-field="o.irpf"/></p>
+                                    <p><strong>Total a deducir: </strong><span t-field="o.totalDeducciones"/></p>
+                                </div>
+                            </div>
+                            <br/>
+                            <br/>
+                            <div>
+                                <p><strong>Líquido a percibir:</strong></p>
+                                <p><span t-field="o.salarioNeto"/></p>
+                                <p><strong>Fecha:</strong></p>
+                                <p><span t-field="o.fecha"/></p>
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>
